@@ -1,6 +1,6 @@
 // Service Worker — بقالات كرتون وحمبلي
 // يخزّن التطبيق محلياً ليعمل بدون إنترنت
-const CACHE = 'baqalat-v2';
+const CACHE = 'baqalat-v3';
 const ASSETS = [
   './',
   './index.html',
