@@ -1,7 +1,6 @@
-
 // Service Worker — بقالات كرتون وحمبلي
 // يخزّن التطبيق محلياً ليعمل بدون إنترنت
-const CACHE = 'baqalat-v7';
+const CACHE = 'baqalat-v9';
 const ASSETS = [
   './',
   './index.html',
@@ -26,6 +25,7 @@ self.addEventListener('activate', (e) => {
   self.clients.claim();
 });
 
+// استراتيجية: الشبكة أولاً ثم الكاش (حتى تصل التحديثات عند توفر الإنترنت)
 self.addEventListener('fetch', (e) => {
   e.respondWith(
     fetch(e.request)
